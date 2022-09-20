@@ -1,6 +1,7 @@
 import 'package:bookticket/screens/home/cards/hotel_card.dart';
 import 'package:bookticket/utils/app_layout.dart';
 import 'package:bookticket/utils/app_style.dart';
+import 'package:bookticket/widgets/app_double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -24,7 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             //flight title
             Container(
-              padding:  EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20.0)),
+              padding:
+                  EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20.0)),
               child: Column(
                 children: [
                   const Gap(50),
@@ -83,23 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const Gap(40),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Upcoming Flights',
-                        style: Styles.headLineStyle2,
-                      ),
-                      InkWell(
-                        child: Text(
-                          'View all',
-                          style: Styles.textStyle
-                              .copyWith(color: Styles.primaryColor),
-                        ),
-                      )
-                    ],
-                  )
+                  //tickets title
+                  const AppDoubleTextWidget(
+                      bigText: 'Upcoming Flights', smallText: 'View all')
                 ],
               ),
             ),
@@ -111,29 +99,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
             //hotels title
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Hotels ',
-                    style: Styles.headLineStyle2,
-                  ),
-                  InkWell(
-                    child: Text(
-                      'View all',
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
-                    ),
-                  )
-                ],
-              ),
-            ),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20.0)),
+                child: const AppDoubleTextWidget(
+                    bigText: 'Hotels', smallText: 'View all')),
             const Gap(15),
 
             //hotel card
-           const HotelCard()
-           
+            const HotelCard()
           ],
         ),
       ),
