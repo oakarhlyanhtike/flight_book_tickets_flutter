@@ -94,7 +94,7 @@ class _SearchScreenState extends State<SearchScreen> {
             children: [
               Container(
                 width: size.width * 0.42,
-                height: AppLayout.getHeight(400),
+                height: AppLayout.getHeight(425),
                 padding: EdgeInsets.symmetric(
                     horizontal: AppLayout.getHeight(10),
                     vertical: AppLayout.getWidth(10)),
@@ -144,7 +144,8 @@ class _SearchScreenState extends State<SearchScreen> {
                             Text(
                               'Discount\nfor Survey',
                               style: Styles.headLineStyle2.copyWith(
-                                  fontWeight: FontWeight.bold, color: Colors.white),
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                             Gap(AppLayout.getHeight(10.0)),
                             Text(
@@ -157,20 +158,56 @@ class _SearchScreenState extends State<SearchScreen> {
                           ],
                         ),
                       ),
-                      Container(
-                    padding: EdgeInsets.all(AppLayout.getHeight(18)),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      //color: Colors.transparent,
-                      border: Border.all(
-                        width: 18,
-                        color: Color(0xFF189999),
+                      Positioned(
+                        top: -40,
+                        right: -45,
+                        child: Container(
+                          padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            //color: Colors.transparent,
+                            border: Border.all(
+                              width: 18,
+                              color: const Color(0xFF189999),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
                     ],
                   ),
-                  
+                  Gap(AppLayout.getHeight(15)),
+                  Container(
+                    width: size.width * 0.44,
+                    height: AppLayout.getHeight(210),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getHeight(15),
+                        vertical: AppLayout.getWidth(15)),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEC6546),
+                      borderRadius: BorderRadius.circular(
+                        AppLayout.getHeight(18),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Take Love',
+                          style: Styles.headLineStyle2.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        Gap(AppLayout.getHeight(5)),
+                        RichText(
+                            text: const TextSpan(children: [
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 38)),
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 50)),
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 38))
+                        ]))
+                      ],
+                    ),
+                  )
                 ],
               ),
             ],
