@@ -1,11 +1,9 @@
 import 'package:bookticket/screens/home/cards/hotel_card.dart';
-import 'package:bookticket/utils/app_layout.dart';
-import 'package:bookticket/utils/app_style.dart';
-import 'package:bookticket/widgets/app_double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
+import '../../utils/utils.dart';
+import '../../widgets/widgets.dart';
 import 'cards/ticket_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -68,14 +66,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 12.0, vertical: 12.0),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF4F6FD),
+                      color: const Color(0xFFF4F6FD),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Row(
                       children: [
                         const Icon(
                           FluentSystemIcons.ic_fluent_search_regular,
-                          color: Color(0xfffbfc205),
+                          color:  Color(0xfffbfc205),
                         ),
                         Text(
                           'Search',

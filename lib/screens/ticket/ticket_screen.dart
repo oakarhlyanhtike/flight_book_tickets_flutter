@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/app_layout.dart';
 
 class TicketScreen extends StatefulWidget {
   const TicketScreen({Key? key}) : super(key: key);
@@ -11,8 +12,7 @@ class TicketScreen extends StatefulWidget {
 class _TicketScreenState extends State<TicketScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('Ticket Screen')),
-    );
+    final size = AppLayout.getSize(context);
+    return Container();
   }
 }

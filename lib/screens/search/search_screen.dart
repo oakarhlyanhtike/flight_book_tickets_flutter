@@ -1,11 +1,9 @@
-import 'package:bookticket/widgets/search_widgets/app_icon_text.dart';
 import 'package:bookticket/utils/app_layout.dart';
 import 'package:bookticket/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../widgets/app_double_text_widget.dart';
-import '../../widgets/search_widgets/find_tickets_button.dart';
+import '../../widgets/widgets.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -32,52 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 .copyWith(fontSize: AppLayout.getWidth(35.0)),
           ),
           Gap(AppLayout.getHeight(20.0)),
-          FittedBox(
-            child: Container(
-              padding: const EdgeInsets.all(3.5),
-              // ignore: sort_child_properties_last
-              child: Row(
-                children: [
-                  /*
-                  airline tickets
-                  */
-                  Container(
-                    width: size.width * 0.44,
-                    padding:
-                        EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(50.0))),
-                    child: const Center(
-                      child: Text('Airline Tickets'),
-                    ),
-                  ),
-                  /*
-                  hotels tickets
-                  */
-                  Container(
-                    width: size.width * 0.44,
-                    padding:
-                        EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    decoration: const BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.horizontal(
-                            right: Radius.circular(50.0))),
-                    child: const Center(
-                      child: Text('Hotels'),
-                    ),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF4F6FD),
-                borderRadius: BorderRadius.circular(
-                  AppLayout.getHeight(50.0),
-                ),
-              ),
-            ),
-          ),
+          const AppTicketTabs(),
           Gap(AppLayout.getHeight(25.0)),
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, title: 'Depature'),
@@ -201,9 +154,9 @@ class _SearchScreenState extends State<SearchScreen> {
                         Gap(AppLayout.getHeight(5)),
                         RichText(
                             text: const TextSpan(children: [
-                          TextSpan(text: '😍', style: TextStyle(fontSize: 38)),
-                          TextSpan(text: '😍', style: TextStyle(fontSize: 50)),
-                          TextSpan(text: '😍', style: TextStyle(fontSize: 38))
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 28)),
+                          TextSpan(text: '🥰', style: TextStyle(fontSize: 40)),
+                          TextSpan(text: '😘', style: TextStyle(fontSize: 28))
                         ]))
                       ],
                     ),
