@@ -30,7 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 .copyWith(fontSize: AppLayout.getWidth(35.0)),
           ),
           Gap(AppLayout.getHeight(20.0)),
-          const AppTicketTabs(),
+          const  AppTicketTabs(firstTab: 'Airline Tickets', secondTab: 'Hotels',),
           Gap(AppLayout.getHeight(25.0)),
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, title: 'Depature'),

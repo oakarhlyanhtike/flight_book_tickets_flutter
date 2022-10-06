@@ -1,7 +1,10 @@
 import 'package:bookticket/utils/utils.dart';
 import 'package:flutter/material.dart';
+
 class AppTicketTabs extends StatelessWidget {
-  const AppTicketTabs({super.key});
+  final String firstTab;
+  final String secondTab;
+  const AppTicketTabs({super.key,required this.firstTab,required this.secondTab});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +21,15 @@ class AppTicketTabs extends StatelessWidget {
             Container(
               width: size.width * 0.44,
               padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-              decoration: const BoxDecoration(
+              decoration: const  BoxDecoration(
                   color: Colors.white,
                   borderRadius:
                       BorderRadius.horizontal(left: Radius.circular(50.0))),
-              child: const Center(
-                child: Text('Airline Tickets'),
+              child:  Center(
+                child: Text(firstTab),
               ),
             ),
-             /*
+            /*
               hotels tickets
              */
             Container(
@@ -36,8 +39,8 @@ class AppTicketTabs extends StatelessWidget {
                   color: Colors.transparent,
                   borderRadius:
                       BorderRadius.horizontal(right: Radius.circular(50.0))),
-              child: const Center(
-                child: Text('Hotels'),
+              child:  Center(
+                child: Text(secondTab),
               ),
             ),
           ],
