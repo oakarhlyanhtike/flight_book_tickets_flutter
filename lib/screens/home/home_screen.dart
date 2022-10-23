@@ -1,9 +1,10 @@
-import 'package:bookticket/screens/home/cards/hotel_card.dart';
+
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import '../../utils/utils.dart';
 import '../../widgets/widgets.dart';
+import '../screens.dart';
 import 'cards/ticket_card.dart';
 
 class HomeScreen extends StatefulWidget {

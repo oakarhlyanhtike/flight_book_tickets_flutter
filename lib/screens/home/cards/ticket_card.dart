@@ -1,6 +1,9 @@
-import 'package:bookticket/utils/app_info_list.dart';
+
 import 'package:flutter/material.dart';
-import '../../../widgets/home_widgets/ticket_view.dart';
+
+import '../../../utils/utils.dart';
+import '../../../widgets/widgets.dart';
+
 class TicketCard extends StatelessWidget {
   const TicketCard({
     Key? key,

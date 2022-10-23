@@ -2,5 +2,8 @@ export 'home_widgets/hotel_view.dart';
 export 'home_widgets/ticket_view.dart';
 export 'search_widgets/app_icon_text.dart';
 export 'search_widgets/find_tickets_button.dart';
+export 'ticketscreen_widget/app_column_layout.dart';
 export 'app_double_text_widget.dart';
 export 'app_ticket_tab.dart';
+export 'layout_builder_widget.dart';
+export 'thick_container_widget.dart';

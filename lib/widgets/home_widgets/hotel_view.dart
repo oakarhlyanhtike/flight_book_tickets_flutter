@@ -1,7 +1,8 @@
-import 'package:bookticket/utils/app_layout.dart';
-import 'package:bookticket/utils/app_style.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+
+import '../../utils/utils.dart';
 
 class HotelView extends StatelessWidget {
   final Map<String, dynamic> hotel;
